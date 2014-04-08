@@ -8,7 +8,7 @@ def ask_and_get(param)
   puts "write your " + param
 
 
-  param = gets.chomp
+gets.chomp
 
 
 end
@@ -23,10 +23,7 @@ end
 
 full_name = name_from_terminal
 
-a = "hello "
-a << "beautiful star of the sky"
-#TODO: use string concatenation to build a custom message embedding the computed full_name
 
-# custom_message =
+custom_message = "Hello, " + full_name + "!"
 
 puts custom_message
