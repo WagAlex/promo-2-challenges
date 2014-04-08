@@ -4,6 +4,13 @@ def ask_and_get(param)
   #TODO:
   #- Ask the user to write a value for param
   #- Get and return the string inputted by the user
+
+  puts "write your " + param
+
+
+  param = gets.chomp
+
+
 end
 
 def name_from_terminal
@@ -16,6 +23,8 @@ end
 
 full_name = name_from_terminal
 
+a = "hello "
+a << "beautiful star of the sky"
 #TODO: use string concatenation to build a custom message embedding the computed full_name
 
 # custom_message =
