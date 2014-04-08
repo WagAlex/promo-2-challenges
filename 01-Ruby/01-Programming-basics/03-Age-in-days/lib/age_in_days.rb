@@ -4,6 +4,8 @@ require 'date'
 
 
 def age_in_days(day, month, year)
-  #TODO: return the age expressed in days given the day, month, and year of birth
+  puts 'What\'s your birthday date?'
+birthday_date = gets.chomp.to_i
 
+birthday_date - time.now
 end
