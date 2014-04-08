@@ -18,14 +18,12 @@ def replace(initial_string, old_letter, new_letter)
 end
 
 def exactly_divide(an_integer, a_divider)
-  an_integer.to_f/a_divider
+  an_integer.to_f / a_divider
 
 end
 
 def is_divisible_by_two(an_integer)
-  if an_integer % 2 ==0
-    return true
-  else false
+an_integer.even?
 
 end
 
