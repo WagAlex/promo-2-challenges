@@ -4,8 +4,7 @@ require 'date'
 
 
 def age_in_days(day, month, year)
-  puts 'What\'s your birthday date?'
-birthday_date = gets.chomp.to_i
-
-birthday_date - time.now
+  birthday = DateTime.new(year, month, day)
+  duration = DateTime.now - birthday # Rational
+  duration.to_i  # Integer, number of days truncated
 end
