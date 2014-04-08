@@ -8,15 +8,13 @@ def get_rid_of_surrounding_whitespaces(a_string)
 end
 
 def belongs_to?(a_string, a_word)
-  # TODO: return true if a_string contains a_word
-  # example: belongs_to?("hey jude", "jude") => true
+  a_string.include? a_word
+
 end
 
 def replace(initial_string, old_letter, new_letter)
  initial_string.tr(old_letter, new_letter)
 
-  # TODO: return a copy of the string with the new letter replacing the old one
-  # example: replace("casanova", "a", "o") => "cosonovo"
 end
 
 def exactly_divide(an_integer, a_divider)
@@ -35,6 +33,7 @@ def random_subset(an_array, sample_size)
 end
 
 def randomize(an_array)
+  an_array.shuffle
   # TODO: return a randomized copy of an_array
   # example: randomize([1, 2, 3, 4]) => [2, 1, 4, 3]
 end
