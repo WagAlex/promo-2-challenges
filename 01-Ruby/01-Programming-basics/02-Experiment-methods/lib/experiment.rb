@@ -3,11 +3,8 @@
 # - Just look in the doc for the right method of the String, Fixnum, and Array classes !
 
 def get_rid_of_surrounding_whitespaces(a_string)
-  a_string.lstrip
+  a_string.strip
 
-end
-  # TODO: return a copy of the string with leading and trailing whitespaces removed
-  # example: get_rid_of_surrounding_whitespaces("  hey yo  ") => "hey yo"
 end
 
 def belongs_to?(a_string, a_word)
