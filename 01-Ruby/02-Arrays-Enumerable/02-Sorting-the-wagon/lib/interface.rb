@@ -23,9 +23,8 @@ nb_students = students.length
 puts "Congratulations! Your Wagon has #{nb_students} students:"
 
 
-students.each do |students|
-puts "-#{students}"
-
-
-
+if students.size >= 2
+  puts "#{list_of_students[0..-2].join(', ')} and #{list_of_students.last}"
+else
+  puts students.first
 end
