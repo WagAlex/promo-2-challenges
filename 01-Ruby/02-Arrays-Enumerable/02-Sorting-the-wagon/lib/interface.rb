@@ -15,9 +15,15 @@ end while name != ""
 
 # TODO: Call `wagon_sort` method and display the sorted student list
 
-wagon_sort = wagon_sort(students)
+list_of_students = wagon_sort(students)
+nb_students = students.lenght - 1
 
-students.each do |student|
-puts "-#{student}"
+puts "Congratulations! Your Wagon has #{nb_students} students:"
+
+
+students.each do |students|
+puts "-#{students}"
+
+
 
 end
