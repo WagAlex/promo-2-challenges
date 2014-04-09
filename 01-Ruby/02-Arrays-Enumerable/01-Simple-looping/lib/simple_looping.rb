@@ -1,16 +1,22 @@
 def sum_with_while(min,max)
+  sum = 0
+  i = min
+  while i <= max
+    sum = sum + i
+    i += 1
+  end
 
-  while min < max
-
-    ((min-1)..(max-1)).reduce(:+)
-
-  else puts "error"
-
+  return sum
 end
 
 def sum_with_for(min,max)
   #TODO: return the sum of the integers between min and max
   #CONSTRAINT: you should use a for..end structure
+  sum = 0
+  for i in min..max do
+    sum = sum + i
+  end
+  return sum
 end
 
 def sum_recursive(min,max)
