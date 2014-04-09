@@ -5,8 +5,7 @@ def sum_with_while(min,max)
     sum = sum + i
     i += 1
   end
-
-  return sum
+  sum
 end
 
 def sum_with_for(min,max)
@@ -16,11 +15,32 @@ def sum_with_for(min,max)
   for i in min..max do
     sum = sum + i
   end
-  return sum
+  sum
 end
 
 def sum_recursive(min,max)
   #TODO (optional): return the sum of the integers between min and max
   #CONSTRAINT: you should use a recursive algorithm, i.e. the method should call itself
+ max < min
+
+  else
+  unless min == max
+    min + sum_recursive(min + 1, max)
+  else
+    min
+  end
 end
+end
+
+p sum_recursive(1, 100)
+
+
+
+
+
+
+
+
+
+
 
