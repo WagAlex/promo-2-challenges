@@ -23,7 +23,10 @@ def sum_recursive(min,max)
   #CONSTRAINT: you should use a recursive algorithm, i.e. the method should call itself
  max < min
 
-  else
+    if min > max
+    error
+  end
+
   unless min == max
     min + sum_recursive(min + 1, max)
   else
@@ -32,7 +35,6 @@ def sum_recursive(min,max)
 end
 end
 
-p sum_recursive(1, 100)
 
 
 
