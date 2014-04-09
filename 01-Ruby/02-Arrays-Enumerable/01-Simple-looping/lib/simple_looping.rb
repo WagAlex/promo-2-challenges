@@ -1,6 +1,11 @@
 def sum_with_while(min,max)
-  #TODO: return the sum of the integers between min and max
-  #CONSTRAINT: you should use a while..end structure
+
+  arr[(min-1)..(max-1)]
+
+  while min < max
+
+    ((min-1)..(max-1)).reduce(:+)
+
 end
 
 def sum_with_for(min,max)
