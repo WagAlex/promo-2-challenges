@@ -1,10 +1,10 @@
 def sum_with_while(min,max)
 
-  arr[(min-1)..(max-1)]
-
   while min < max
 
     ((min-1)..(max-1)).reduce(:+)
+
+  else puts "error"
 
 end
 
