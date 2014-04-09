@@ -22,11 +22,13 @@ def sum_recursive(min,max)
   #TODO (optional): return the sum of the integers between min and max
   #CONSTRAINT: you should use a recursive algorithm, i.e. the method should call itself
 
-    if min > max
-    error
+if min > max
+
+   raise ArgumentError
+
   end
 
-  unless min == max
+  unless min==max
     min + sum_recursive(min + 1, max)
   else
     min
