@@ -2,13 +2,14 @@ def sum_odd_indexed(array)
   # TODO: computes the sum of elements at odd indices (1, 3, 5, 7, etc.)
   #       You should make use Enumerable#each_with_index
   sum = 0
-  array.each_with_index { |s, i| sum += s.to_i if i % 2 == 1 }
+  array.each_with_index {|s, i| sum += s.to_i if i % 2 == 1}
   puts sum
 end
 
 def even_numbers(array)
   # TODO: Return the even numbers from a list of integers.
   #       You should use Enumerable#select
+  array.select { |num|  num.even?  }
 end
 
 def short_words(array, max_length)
