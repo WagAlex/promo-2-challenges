@@ -7,6 +7,8 @@ end
 
 def timer_for
   #TODO:  Return time taken to execute the given block
+  timer_for do
+  (1..100).each { |i| (1..100000).to_a.shuffle.sort }
 end
 
 def transform(element)
