@@ -13,21 +13,23 @@ class OrangeTree
   def one_year_passes!
     @age += 1
 
-    @height += 1 if @age < 10
-    if 5 <= @age && @age < 10
+    @height += 1 if @age < 11
+    if 5 < @age && @age < 10
       @fruits = 100
+    elsif @age < 5 && @age > 15
+      @fruits = 0
     elsif 10 <= @age && @age < 15
       @fruits = 200
     end
   end
 
   def dead?
-    if @age < 50
-      @alive = true
+    if @age <= 50
+      @dead = false
     elsif @age >= 100
-      @alive = false
-    else @age += Random.new.rand(0..50)
-      @alive = false
+      @dead = true
+    else @age += Random.new.rand(0..49)
+      @dead = true
     end
   end
 
