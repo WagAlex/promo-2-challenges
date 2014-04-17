@@ -26,7 +26,9 @@ class BankAccount
 
   def withdraw(amount)
     # TODO: Call add_transaction with the right argument
+    amount.add_transaction
     # TODO: returns a string with a message
+    "#{amount} is the value of your #{initial_deposit}"
   end
 
   def deposit(amount)
