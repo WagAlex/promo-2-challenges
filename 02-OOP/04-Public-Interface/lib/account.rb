@@ -2,6 +2,8 @@
 class DepositError < StandardError
 end
 
+attr_reader = :name, :position, :amount
+
 class BankAccount
 
   # Contract for the BankAccount class
@@ -26,35 +28,50 @@ class BankAccount
 
   def withdraw(amount)
     # TODO: Call add_transaction with the right argument
-    amount.add_transaction
+    add_transaction(-amount)
     # TODO: returns a string with a message
-    "#{amount} is the value of your #{initial_deposit}"
+    "You removed #{amount}€ from your bank account"
   end
 
   def deposit(amount)
     # TODO: Call add_transaction with the right argument
+    add_transaction(amount)
     # TODO: returns a string with a message
+    "You filed #{amount}€ from your bank account"
   end
 
   def transactions_history(args = {})
     # TODO: Check if there is a password and if so if it is correct
+    if args[:password] == @password
+      @transactions.to_s
+    elsif args[:password] == nil
+      "tape your password again"
+    elsif args[:password] != @password
+      "wrong password"
+    end
     # TODO: return a string displaying the transactions, BUT NOT return the transaction array !
   end
 
   def iban
     # TODO: Hide the middle of the IBAN like FR14**************606 and return it
+    new_iban = @iban[0,3] + "***********" + @iban[-3,-1]
+
+    p "#{new_iban}"
   end
 
   def to_s
     # Method used when printing account object as string (also used for string interpolation)
     # TODO: Displays the account owner, the hidden iban and the position of the account
+     "Owner: #{@name}, IBAN: #{new_iban} Current Amount: #{@position}"
   end
 
   private
 
   def add_transaction(amount)
     # TODO: add the amount in the transactions array
+    @transactions << amount
     # TODO: update the current position (which represents the balance of the account)
+     @position += amount
   end
 
 end
