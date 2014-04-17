@@ -19,5 +19,15 @@ end
 
 class JellyBean < Dessert
   def initialize(name, calories, flavor)
+    @flavor = flavor
+  end
+
+  def delicious?
+    if @flavor = "black licorice"
+      false
+    else
+      super
+    end
   end
 end
+
