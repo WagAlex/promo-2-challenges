@@ -45,7 +45,7 @@ class BankAccount
     if args[:password] == @password
       @transactions.to_s
     elsif args[:password] == nil
-      "tape your password again"
+     "no password given"
     elsif args[:password] != @password
       "wrong password"
     end
