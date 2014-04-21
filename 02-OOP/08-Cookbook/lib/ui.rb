@@ -14,16 +14,33 @@ class UI
   def list
     # TODO: call the appropriate controller method with the proper argument(s)
     # TODO: format and display the retrieved data in a numbered list
+    print "\n"
+    puts "Here are your recipes"
+    print "\n"
+
+
+    @controller.list_recipes.each_with_index do |recipe, index|
+      puts "#{index + 1}. #{recipe} (miam miam)"
+    end
+
   end
 
   def add
     # TODO: ask the user a recipe name
+    print "\n"
+    "Which recipe's name do you want?"
+    print "\n"
+
+    name = gets.chomp
     # TODO: call the appropriate controller method with the proper argument(s)
   end
 
   def del
     # TODO: ask the user a recipe index
-    # TODO: call the appropriate controller method with the proper argument(s)
+    puts "Which recipe do you want to delete?"
+      index = gets.chomp
+      delete_recipes = @controller.delete_recipe(index - 1)
+      puts "The recipe #{delete_recipes} has been deleted"  # TODO: call the appropriate controller method with the proper argument(s)
   end
 
   def exit
@@ -35,6 +52,7 @@ class UI
     # TODO: Get the user input and return it
     # [OPTIONAL] You can think of the case where the user
     # enters a wrong choice.
+    gets.chomp
   end
 
   def display
