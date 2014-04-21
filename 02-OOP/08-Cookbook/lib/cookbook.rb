@@ -7,10 +7,15 @@ class Cookbook
 
   def initialize(file)
     # TODO: Retrieve the data from your CSV file and store it in an instance variable
-    load_csv(file)
     @file = file
+    @recipes = csv_to_array(@file)
   end
 
+  def all
+    array = []
+    @recipes.each {|cookbook_recipe| array << cookbook_recipe.join}
+    p array
+  end
   def retrieve_all_recipes
     @recipes.each_with_index do |index, item|
       "#{index + 1} + #{item}"
@@ -19,12 +24,23 @@ class Cookbook
 
 
   def create(name)
+    @recipes << name
+    save
+
   end
 
   def destroy
+    @contents.delete_at(index)
+    save
   end
 
-
+  def save
+    CSV.open(@file, "w") do |csv|
+      @contents.each do |element|
+    csv << [element]
+      end
+    end
+  end
 
   private
 

@@ -14,6 +14,7 @@ class UI
   def list
     # TODO: call the appropriate controller method with the proper argument(s)
     # TODO: format and display the retrieved data in a numbered list
+    recipes = @controller.list
     print "\n"
     puts "Here are your recipes"
     print "\n"
@@ -32,19 +33,21 @@ class UI
     print "\n"
 
     name = gets.chomp
+    recipe = @controller.add(name)
     # TODO: call the appropriate controller method with the proper argument(s)
   end
 
   def del
     # TODO: ask the user a recipe index
     puts "Which recipe do you want to delete?"
-      index = gets.chomp
-      delete_recipes = @controller.delete_recipe(index - 1)
-      puts "The recipe #{delete_recipes} has been deleted"  # TODO: call the appropriate controller method with the proper argument(s)
+    index = gets.chomp
+    delete_recipes = @controller.delete_recipe(index - 1)
+    puts "The recipe #{delete_recipes} has been deleted"  # TODO: call the appropriate controller method with the proper argument(s)
   end
 
   def exit
     # TODO: exit the program
+    @running = false
     # Hint: Take a look at the display method !
   end
 
@@ -52,7 +55,10 @@ class UI
     # TODO: Get the user input and return it
     # [OPTIONAL] You can think of the case where the user
     # enters a wrong choice.
-    gets.chomp
+    input = gets.chomp.to_sym
+    unless TASKS.keys.include?(input)
+      puts "Invalid input, please retry"
+      self.user_input
   end
 
   def display
