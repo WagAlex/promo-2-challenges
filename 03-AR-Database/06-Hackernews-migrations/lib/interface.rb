@@ -1,5 +1,6 @@
 require_relative 'config/application'
 require_relative 'crud'
+require "date"
 
 
 def ask_and_get(param)
@@ -17,9 +18,9 @@ while true
   puts "2. Read your posts"
   puts "3. Delete all posts"
   puts "4. Exit"
-  
+
 	choice =  gets.chomp.to_i
-	
+
 	case choice
   when 1
     name = ask_and_get("name")
@@ -28,15 +29,20 @@ while true
     post = { name: name, source_url: source_url, date: Time.now, rating: rating }
     create_post(db, post)
   when 2
-    get_posts(db)
-    #TODO: prints nicely the results from DB queries (you could use #strftime to format datetime display)
+    get_posts(db).each do |post|
+      date = DateTime.parse(post[3])
+      puts "#{post[0]}. Name: #{post[1]} \n URL:#{post[2]} \n Date: #{date.strftime("%A %d %B %Y")} \n Rating: #{post[4]}"
+      #TODO: prints nicely the results from DB queries (you could use #strftime to format datetime display)
+      #:date = t.strftime("on %m/%d/%Y")
+      # p "Name: #{:name}, URl: #{:source_url}, Date: #{:date}"
+    end
   when 3
     delete_posts(db)
-    
+
   #TODO: add other CRUD tasks to your interface if you wish!
-  when 4 
+  when 4
     break
-	end 
-	
+	end
+
 end
 

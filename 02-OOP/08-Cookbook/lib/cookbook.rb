@@ -16,12 +16,6 @@ class Cookbook
     @recipes.each {|cookbook_recipe| array << cookbook_recipe.join}
     p array
   end
-  def retrieve_all_recipes
-    @recipes.each_with_index do |index, item|
-      "#{index + 1} + #{item}"
-    end
-  end
-
 
   def create(name)
     @recipes << name

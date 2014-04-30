@@ -1,6 +1,7 @@
 require 'sqlite3'
 
 # opens the database
+
 DATABASE_PATH = "/Users/alexandre/code/WagAlex/promo-2-challenges/03-AR-Database/03-Interacting-with-code/lib/db/jukebox.sqlite"
 db = SQLite3::Database.new(DATABASE_PATH)
 
@@ -29,3 +30,4 @@ p number_of_rows(db, "Artist")
 p sorted_artists(db)
 p love_tracks(db)
 p long_tracks(db, 6)
+

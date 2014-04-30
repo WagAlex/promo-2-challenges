@@ -9,11 +9,13 @@
 
 def are_identical_symbols_same_objects?
   # TODO: true or false?
+
 end
 
 def are_identical_strings_same_objects?
   # TODO: true or false?
 end
+
 
 
 # Remember, RTFM! Your doc is your friend

@@ -1,4 +1,4 @@
-## Background and Objectives
+# Background and Objectives
 In this exercise, we will model your relation with a personal coach. This coach is rather stupid and exhibits the following behavior
 
 1. If you don't **ask** him something, but just **tell** him something (e.g. `"I met a girl last night"`), he will just answer back `"I don't care son, get dressed and go to work !"`
@@ -45,7 +45,7 @@ The objectives of this challenge are :
 ## Learning Badges
 - What's the usual flow of a program ?
 - How do structures like `if..else..end` or `while..end` change this flow ?
-- How do these structures work ? 
+- How do these structures work ?
 - What's a conditional statement ? Which values can it take ? What's the difference between `=` and `==` ?
 - Does a simple method call change the flow of your program ?
 

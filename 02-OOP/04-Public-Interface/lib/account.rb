@@ -50,6 +50,7 @@ class BankAccount
       "wrong password"
     end
     # TODO: return a string displaying the transactions, BUT NOT return the transaction array !
+
   end
 
   def iban
@@ -62,7 +63,7 @@ class BankAccount
   def to_s
     # Method used when printing account object as string (also used for string interpolation)
     # TODO: Displays the account owner, the hidden iban and the position of the account
-     "Owner: #{@name}, IBAN: #{new_iban} Current Amount: #{@position}"
+     "Owner: #{@name}, IBAN: #{iban} Current Amount: #{@position}"
   end
 
   private
