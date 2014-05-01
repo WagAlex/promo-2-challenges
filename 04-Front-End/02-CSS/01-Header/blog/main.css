@@ -1,5 +1,31 @@
 .container {
-  margin: 0 auto;  
+  margin: 0 auto;
   width: 720px;
 	font-family: 'Open Sans', sans-serif;
+}
+
+
+header {
+  border-bottom: 1px dotted grey;
+  padding: 10px;
+  text-align: center;
+}
+
+
+ul {
+  list-style-type: none;
+}
+
+#navigation li {
+  display: inline;
+  padding: 1.4em;
+}
+
+.inline {
+  display: inline;
+}
+
+footer {
+  border-top: 1px dotted grey;
+  padding: 10px;
 }
