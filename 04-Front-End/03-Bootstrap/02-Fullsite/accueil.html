@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LANDING</title>
+    <meta charset="utf-8">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <style type="text/css"></style>
+    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body>
+    <div class="container container-full-width page-container">
+      <a href="/" class="brand airbnb">Airbnb</a>
+      <ul class="nav">
+      </ul>
+
+      <ul class="nav pull-right help-menu" style="margin-left:0;">
+        <li class="dropdown" data-dropdown-sticky="true">
+          <a id="help_dropdown" class="dropdown-toggle help-toggle" href="javascript:void(0)"> Aide <b class="caret"></b></a>
+          <div class="dropdown-menu help-dropdown dropdown-bordered">
+            <div class="nav-header">
+              <a href="/help?ref=help-dropdown" class="help-center-link">Visiter le Centre d'aide »</a>
+            </div>
+            <ul class="unstyled list-unstyled">
+              <li class="loading"></li>
+              <li class="hidden">
+                <a href="/safety?ref=help-dropdown" class="">Voir le centre Confiance et sécurité</a>
+              </li>
+              <li class="all_faqs hidden">
+                <a href="/help/topic/hosting?ref=help-dropdown">Voir toutes les FAQ</a>
+              </li>
+              <li id="faqadmin" style="display: none;">
+                <input type="hidden" name="faq_link[page]" value="homepages-show">
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="list-your-space">
+          <a id="list-your-space" class="yellow btn btn-special" href="/rooms/new">Publiez votre annonce</a>
+        </li>
+      </ul>
+
+      <ul class="nav pull-right logged-out">
+        <li id="sign_up"><a data-signup-modal="" href="/signup_login?redirect_params[action]=show&amp;redirect_params[controller]=homepages">Inscription</a></li>
+        <li id="login"><a data-login-modal="" href="/login?redirect_params[action]=show&amp;redirect_params[controller]=homepages">Connexion</a></li>
+      </ul>
+
+      <ul class="nav pull-right logged-in">
+        <li class="dropdown user-item">
+          <a class="dropdown-toggle" href="javascript:void(0)">
+            <div class="mini-media-box media-photo user-profile-image"></div>
+            <span class="value_name">Utilisateur</span> <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu dropdown-bordered header-dropdown">
+            <li><a href="/home/dashboard">Tableau de bord</a></li>
+            <li class="listings">
+              <a href="/rooms">
+                <span class="singular" style="display: none;">Votre annonce</span>
+                <span class="plural">Mes annonces</span>
+              </a>
+            </li>
+            <li class="reservations" style="display: none;">
+              <a href="/my_listings">Mes réservations</a>
+            </li>
+            <li><a href="/trips/upcoming">Mes voyages</a></li>
+            <li><a href="/wishlists/my" id="wishlists">Wish Lists</a></li>
+            <li class="groups">
+              <a href="/groups">Groupes</a>
+            </li>
+            <li>
+              <a href="/invite?r=3">
+                Inviter des amis
+                <span class="label label-pink label-new">Nouveau</span>
+              </a>
+            </li>
+            <li><a href="/users/edit">Modifier le profil</a></li>
+            <li><a href="/account">Compte</a></li>
+            <li><a href="/logout" id="header-logout">Déconnexion</a></li>
+          </ul>
+        </li>
+        <li class="divider-vertical"></li>
+        <li id="inbox-item">
+          <a href="/inbox"><i class="icon icon-mail hide-text"><span class="text-hide">Boîte de réception</span></i><i class="alert-count position-super fade">0</i></a>
+        </li>
+        <li class="divider-vertical"></li>
+      </ul>
+    </div>
+
+
+  </body>
+</html>

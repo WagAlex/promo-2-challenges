@@ -1,0 +1,20 @@
+.sign-in{
+  left: 200px;
+  top: 30%;
+}
+
+hr{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-top: 1px solid #eee;
+}
+
+footer{
+  float: left;
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 20px;
+
+}
+
