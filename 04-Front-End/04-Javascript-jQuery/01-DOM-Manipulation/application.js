@@ -13,7 +13,9 @@ function run_challenges() {
 
 
   // Ex 2. Fill the content of the email input with your email
-  var email = 'alexandre@tournaud.com';
+  function myEmail {
+    return email = 'alexandre@tournaud.com';
+  }
 
 
   // Ex 3. Replace the email hint (next to the input) with 'This is my email now'
